@@ -1,0 +1,10 @@
+$primary: #d0021b;
+$secondary: #1b31e0;
+
+$transparent: transparent;
+
+$addColors: (
+  "primary": ($primary, $white),
+  "secondary": ($secondary, $white),
+  "transparent": ($transparent, $black),
+);

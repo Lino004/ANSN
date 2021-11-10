@@ -1,0 +1,227 @@
+$color-scroll1: white;
+$color-scroll2: $primary;
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  scrollbar-color: $color-scroll2 white;
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    //box-shadow: inset 0 0 5px black;
+    background-color: $color-scroll1;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $color-scroll2;
+    &:hover {
+      background: $color-scroll2;
+    }
+  }
+}
+.is-scroll {
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-color: $color-scroll2 white;
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    //box-shadow: inset 0 0 5px black;
+    background-color: $color-scroll1;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $color-scroll2;
+    &:hover {
+      background: $color-scroll2;
+    }
+  }
+}
+#app {
+  height: 100%;
+}
+
+// dimension
+.is-128xauto {
+  width: 128px;
+  height: auto;
+}
+.is-min-height-250px {
+  min-height: 250px;
+}
+.is-height-100p {
+  height: 100%;
+}
+.is-width-100p {
+  width: 100%;
+}
+.is-height-100p-161px {
+  height: calc(100vh - 161px);
+}
+
+// logo
+.logo {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+/*  */
+.has-bg-img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-color: #000000;
+    opacity: 0.75;
+  }
+}
+
+/* pagination */
+.pagination-link.is-current {
+  background-color: $primary;
+  border-color: $primary;
+  color: #fff;
+}
+
+/* card plus */
+.is-card-plus {
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  .icon-plus {
+    margin: auto;
+    z-index: 0;
+    i::before {
+      font-size: 100px;
+    }
+  }
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-color: #000000;
+    opacity: 0.75;
+    z-index: 0;
+  }
+}
+
+/* project detail */
+.project-image {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+
+  &.error {
+    border: solid red thin;
+  }
+
+  & img {
+    position: absolute;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.action-img {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+/*-- Project Information --*/
+.project-information {
+  background-color: $dark;
+  padding: 30px 35px;
+  & h3 {
+    color: $white;
+    margin-bottom: 20px;
+  }
+  & ul {
+    list-style: outside none none;
+    margin: 0;
+    & li {
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba($white, 0.1);
+      color: $white;
+      font-size: 14px;
+      &:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border: none;
+      }
+      & strong {
+        width: 150px;
+        display: inline-flex;
+        color: $white;
+      }
+      & .control {
+        display: inline-flex;
+        input {
+          color: $white;
+          background-color: $dark;
+        }
+      }
+    }
+  }
+}
+
+.no-box-shadow {
+  box-shadow: none;
+}
+
+/* cropper modal */
+#modal_cropper {
+  & > .animation-content.modal-content {
+    height: 100% !important;
+  }
+}
+
+.preview {
+  height: 160px;
+  width: 160px;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+.perfect-round {
+  border-radius: 50% !important;
+  height: 42px !important;
+  width: 42px !important;
+  padding: 0;
+}
+
+.card-action-img {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 5px;
+}
+
+.content figure {
+  margin-left: 0em;
+  margin-right: 0em;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
